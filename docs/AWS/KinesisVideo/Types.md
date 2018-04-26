@@ -26,7 +26,7 @@ Encode APIName
 
 ``` purescript
 newtype AccountStreamLimitExceededException
-  = AccountStreamLimitExceededException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = AccountStreamLimitExceededException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The number of streams created for the account is too high.</p>
@@ -51,7 +51,7 @@ Constructs AccountStreamLimitExceededException from required parameters
 #### `newAccountStreamLimitExceededException'`
 
 ``` purescript
-newAccountStreamLimitExceededException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> AccountStreamLimitExceededException
+newAccountStreamLimitExceededException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> AccountStreamLimitExceededException
 ```
 
 Constructs AccountStreamLimitExceededException's fields from required parameters
@@ -60,7 +60,7 @@ Constructs AccountStreamLimitExceededException's fields from required parameters
 
 ``` purescript
 newtype ClientLimitExceededException
-  = ClientLimitExceededException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ClientLimitExceededException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Kinesis Video Streams has throttled the request because you have exceeded the limit of allowed client calls. Try making the call later.</p>
@@ -85,7 +85,7 @@ Constructs ClientLimitExceededException from required parameters
 #### `newClientLimitExceededException'`
 
 ``` purescript
-newClientLimitExceededException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ClientLimitExceededException
+newClientLimitExceededException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ClientLimitExceededException
 ```
 
 Constructs ClientLimitExceededException's fields from required parameters
@@ -110,7 +110,7 @@ Encode ComparisonOperator
 
 ``` purescript
 newtype CreateStreamInput
-  = CreateStreamInput { "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: StreamName, "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) }
+  = CreateStreamInput { "DeviceName" :: Maybe (DeviceName), "StreamName" :: StreamName, "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "DataRetentionInHours" :: Maybe (DataRetentionInHours) }
 ```
 
 ##### Instances
@@ -133,7 +133,7 @@ Constructs CreateStreamInput from required parameters
 #### `newCreateStreamInput'`
 
 ``` purescript
-newCreateStreamInput' :: StreamName -> ({ "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: StreamName, "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) } -> { "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: StreamName, "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) }) -> CreateStreamInput
+newCreateStreamInput' :: StreamName -> ({ "DeviceName" :: Maybe (DeviceName), "StreamName" :: StreamName, "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "DataRetentionInHours" :: Maybe (DataRetentionInHours) } -> { "DeviceName" :: Maybe (DeviceName), "StreamName" :: StreamName, "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "DataRetentionInHours" :: Maybe (DataRetentionInHours) }) -> CreateStreamInput
 ```
 
 Constructs CreateStreamInput's fields from required parameters
@@ -142,7 +142,7 @@ Constructs CreateStreamInput's fields from required parameters
 
 ``` purescript
 newtype CreateStreamOutput
-  = CreateStreamOutput { "StreamARN" :: NullOrUndefined (ResourceARN) }
+  = CreateStreamOutput { "StreamARN" :: Maybe (ResourceARN) }
 ```
 
 ##### Instances
@@ -165,7 +165,7 @@ Constructs CreateStreamOutput from required parameters
 #### `newCreateStreamOutput'`
 
 ``` purescript
-newCreateStreamOutput' :: ({ "StreamARN" :: NullOrUndefined (ResourceARN) } -> { "StreamARN" :: NullOrUndefined (ResourceARN) }) -> CreateStreamOutput
+newCreateStreamOutput' :: ({ "StreamARN" :: Maybe (ResourceARN) } -> { "StreamARN" :: Maybe (ResourceARN) }) -> CreateStreamOutput
 ```
 
 Constructs CreateStreamOutput's fields from required parameters
@@ -222,7 +222,7 @@ Encode DataRetentionInHours
 
 ``` purescript
 newtype DeleteStreamInput
-  = DeleteStreamInput { "StreamARN" :: ResourceARN, "CurrentVersion" :: NullOrUndefined (Version) }
+  = DeleteStreamInput { "StreamARN" :: ResourceARN, "CurrentVersion" :: Maybe (Version) }
 ```
 
 ##### Instances
@@ -245,7 +245,7 @@ Constructs DeleteStreamInput from required parameters
 #### `newDeleteStreamInput'`
 
 ``` purescript
-newDeleteStreamInput' :: ResourceARN -> ({ "StreamARN" :: ResourceARN, "CurrentVersion" :: NullOrUndefined (Version) } -> { "StreamARN" :: ResourceARN, "CurrentVersion" :: NullOrUndefined (Version) }) -> DeleteStreamInput
+newDeleteStreamInput' :: ResourceARN -> ({ "StreamARN" :: ResourceARN, "CurrentVersion" :: Maybe (Version) } -> { "StreamARN" :: ResourceARN, "CurrentVersion" :: Maybe (Version) }) -> DeleteStreamInput
 ```
 
 Constructs DeleteStreamInput's fields from required parameters
@@ -270,7 +270,7 @@ Encode DeleteStreamOutput
 
 ``` purescript
 newtype DescribeStreamInput
-  = DescribeStreamInput { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN) }
+  = DescribeStreamInput { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN) }
 ```
 
 ##### Instances
@@ -293,7 +293,7 @@ Constructs DescribeStreamInput from required parameters
 #### `newDescribeStreamInput'`
 
 ``` purescript
-newDescribeStreamInput' :: ({ "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN) } -> { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN) }) -> DescribeStreamInput
+newDescribeStreamInput' :: ({ "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN) } -> { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN) }) -> DescribeStreamInput
 ```
 
 Constructs DescribeStreamInput's fields from required parameters
@@ -302,7 +302,7 @@ Constructs DescribeStreamInput's fields from required parameters
 
 ``` purescript
 newtype DescribeStreamOutput
-  = DescribeStreamOutput { "StreamInfo" :: NullOrUndefined (StreamInfo) }
+  = DescribeStreamOutput { "StreamInfo" :: Maybe (StreamInfo) }
 ```
 
 ##### Instances
@@ -325,7 +325,7 @@ Constructs DescribeStreamOutput from required parameters
 #### `newDescribeStreamOutput'`
 
 ``` purescript
-newDescribeStreamOutput' :: ({ "StreamInfo" :: NullOrUndefined (StreamInfo) } -> { "StreamInfo" :: NullOrUndefined (StreamInfo) }) -> DescribeStreamOutput
+newDescribeStreamOutput' :: ({ "StreamInfo" :: Maybe (StreamInfo) } -> { "StreamInfo" :: Maybe (StreamInfo) }) -> DescribeStreamOutput
 ```
 
 Constructs DescribeStreamOutput's fields from required parameters
@@ -350,7 +350,7 @@ Encode DeviceName
 
 ``` purescript
 newtype DeviceStreamLimitExceededException
-  = DeviceStreamLimitExceededException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = DeviceStreamLimitExceededException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Not implemented. </p>
@@ -375,7 +375,7 @@ Constructs DeviceStreamLimitExceededException from required parameters
 #### `newDeviceStreamLimitExceededException'`
 
 ``` purescript
-newDeviceStreamLimitExceededException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> DeviceStreamLimitExceededException
+newDeviceStreamLimitExceededException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> DeviceStreamLimitExceededException
 ```
 
 Constructs DeviceStreamLimitExceededException's fields from required parameters
@@ -400,7 +400,7 @@ Encode ErrorMessage
 
 ``` purescript
 newtype GetDataEndpointInput
-  = GetDataEndpointInput { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "APIName" :: APIName }
+  = GetDataEndpointInput { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "APIName" :: APIName }
 ```
 
 ##### Instances
@@ -423,7 +423,7 @@ Constructs GetDataEndpointInput from required parameters
 #### `newGetDataEndpointInput'`
 
 ``` purescript
-newGetDataEndpointInput' :: APIName -> ({ "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "APIName" :: APIName } -> { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "APIName" :: APIName }) -> GetDataEndpointInput
+newGetDataEndpointInput' :: APIName -> ({ "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "APIName" :: APIName } -> { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "APIName" :: APIName }) -> GetDataEndpointInput
 ```
 
 Constructs GetDataEndpointInput's fields from required parameters
@@ -432,7 +432,7 @@ Constructs GetDataEndpointInput's fields from required parameters
 
 ``` purescript
 newtype GetDataEndpointOutput
-  = GetDataEndpointOutput { "DataEndpoint" :: NullOrUndefined (DataEndpoint) }
+  = GetDataEndpointOutput { "DataEndpoint" :: Maybe (DataEndpoint) }
 ```
 
 ##### Instances
@@ -455,7 +455,7 @@ Constructs GetDataEndpointOutput from required parameters
 #### `newGetDataEndpointOutput'`
 
 ``` purescript
-newGetDataEndpointOutput' :: ({ "DataEndpoint" :: NullOrUndefined (DataEndpoint) } -> { "DataEndpoint" :: NullOrUndefined (DataEndpoint) }) -> GetDataEndpointOutput
+newGetDataEndpointOutput' :: ({ "DataEndpoint" :: Maybe (DataEndpoint) } -> { "DataEndpoint" :: Maybe (DataEndpoint) }) -> GetDataEndpointOutput
 ```
 
 Constructs GetDataEndpointOutput's fields from required parameters
@@ -464,7 +464,7 @@ Constructs GetDataEndpointOutput's fields from required parameters
 
 ``` purescript
 newtype InvalidArgumentException
-  = InvalidArgumentException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InvalidArgumentException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The value for this input parameter is invalid.</p>
@@ -489,7 +489,7 @@ Constructs InvalidArgumentException from required parameters
 #### `newInvalidArgumentException'`
 
 ``` purescript
-newInvalidArgumentException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InvalidArgumentException
+newInvalidArgumentException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InvalidArgumentException
 ```
 
 Constructs InvalidArgumentException's fields from required parameters
@@ -498,7 +498,7 @@ Constructs InvalidArgumentException's fields from required parameters
 
 ``` purescript
 newtype InvalidDeviceException
-  = InvalidDeviceException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InvalidDeviceException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Not implemented.</p>
@@ -523,7 +523,7 @@ Constructs InvalidDeviceException from required parameters
 #### `newInvalidDeviceException'`
 
 ``` purescript
-newInvalidDeviceException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InvalidDeviceException
+newInvalidDeviceException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InvalidDeviceException
 ```
 
 Constructs InvalidDeviceException's fields from required parameters
@@ -532,7 +532,7 @@ Constructs InvalidDeviceException's fields from required parameters
 
 ``` purescript
 newtype InvalidResourceFormatException
-  = InvalidResourceFormatException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InvalidResourceFormatException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The format of the <code>StreamARN</code> is invalid.</p>
@@ -557,7 +557,7 @@ Constructs InvalidResourceFormatException from required parameters
 #### `newInvalidResourceFormatException'`
 
 ``` purescript
-newInvalidResourceFormatException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InvalidResourceFormatException
+newInvalidResourceFormatException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InvalidResourceFormatException
 ```
 
 Constructs InvalidResourceFormatException's fields from required parameters
@@ -582,7 +582,7 @@ Encode KmsKeyId
 
 ``` purescript
 newtype ListStreamsInput
-  = ListStreamsInput { "MaxResults" :: NullOrUndefined (ListStreamsInputLimit), "NextToken" :: NullOrUndefined (NextToken), "StreamNameCondition" :: NullOrUndefined (StreamNameCondition) }
+  = ListStreamsInput { "MaxResults" :: Maybe (ListStreamsInputLimit), "NextToken" :: Maybe (NextToken), "StreamNameCondition" :: Maybe (StreamNameCondition) }
 ```
 
 ##### Instances
@@ -605,7 +605,7 @@ Constructs ListStreamsInput from required parameters
 #### `newListStreamsInput'`
 
 ``` purescript
-newListStreamsInput' :: ({ "MaxResults" :: NullOrUndefined (ListStreamsInputLimit), "NextToken" :: NullOrUndefined (NextToken), "StreamNameCondition" :: NullOrUndefined (StreamNameCondition) } -> { "MaxResults" :: NullOrUndefined (ListStreamsInputLimit), "NextToken" :: NullOrUndefined (NextToken), "StreamNameCondition" :: NullOrUndefined (StreamNameCondition) }) -> ListStreamsInput
+newListStreamsInput' :: ({ "MaxResults" :: Maybe (ListStreamsInputLimit), "NextToken" :: Maybe (NextToken), "StreamNameCondition" :: Maybe (StreamNameCondition) } -> { "MaxResults" :: Maybe (ListStreamsInputLimit), "NextToken" :: Maybe (NextToken), "StreamNameCondition" :: Maybe (StreamNameCondition) }) -> ListStreamsInput
 ```
 
 Constructs ListStreamsInput's fields from required parameters
@@ -630,7 +630,7 @@ Encode ListStreamsInputLimit
 
 ``` purescript
 newtype ListStreamsOutput
-  = ListStreamsOutput { "StreamInfoList" :: NullOrUndefined (StreamInfoList), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListStreamsOutput { "StreamInfoList" :: Maybe (StreamInfoList), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -653,7 +653,7 @@ Constructs ListStreamsOutput from required parameters
 #### `newListStreamsOutput'`
 
 ``` purescript
-newListStreamsOutput' :: ({ "StreamInfoList" :: NullOrUndefined (StreamInfoList), "NextToken" :: NullOrUndefined (NextToken) } -> { "StreamInfoList" :: NullOrUndefined (StreamInfoList), "NextToken" :: NullOrUndefined (NextToken) }) -> ListStreamsOutput
+newListStreamsOutput' :: ({ "StreamInfoList" :: Maybe (StreamInfoList), "NextToken" :: Maybe (NextToken) } -> { "StreamInfoList" :: Maybe (StreamInfoList), "NextToken" :: Maybe (NextToken) }) -> ListStreamsOutput
 ```
 
 Constructs ListStreamsOutput's fields from required parameters
@@ -662,7 +662,7 @@ Constructs ListStreamsOutput's fields from required parameters
 
 ``` purescript
 newtype ListTagsForStreamInput
-  = ListTagsForStreamInput { "NextToken" :: NullOrUndefined (NextToken), "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName) }
+  = ListTagsForStreamInput { "NextToken" :: Maybe (NextToken), "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName) }
 ```
 
 ##### Instances
@@ -685,7 +685,7 @@ Constructs ListTagsForStreamInput from required parameters
 #### `newListTagsForStreamInput'`
 
 ``` purescript
-newListTagsForStreamInput' :: ({ "NextToken" :: NullOrUndefined (NextToken), "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName) } -> { "NextToken" :: NullOrUndefined (NextToken), "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName) }) -> ListTagsForStreamInput
+newListTagsForStreamInput' :: ({ "NextToken" :: Maybe (NextToken), "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName) } -> { "NextToken" :: Maybe (NextToken), "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName) }) -> ListTagsForStreamInput
 ```
 
 Constructs ListTagsForStreamInput's fields from required parameters
@@ -694,7 +694,7 @@ Constructs ListTagsForStreamInput's fields from required parameters
 
 ``` purescript
 newtype ListTagsForStreamOutput
-  = ListTagsForStreamOutput { "NextToken" :: NullOrUndefined (NextToken), "Tags" :: NullOrUndefined (ResourceTags) }
+  = ListTagsForStreamOutput { "NextToken" :: Maybe (NextToken), "Tags" :: Maybe (ResourceTags) }
 ```
 
 ##### Instances
@@ -717,7 +717,7 @@ Constructs ListTagsForStreamOutput from required parameters
 #### `newListTagsForStreamOutput'`
 
 ``` purescript
-newListTagsForStreamOutput' :: ({ "NextToken" :: NullOrUndefined (NextToken), "Tags" :: NullOrUndefined (ResourceTags) } -> { "NextToken" :: NullOrUndefined (NextToken), "Tags" :: NullOrUndefined (ResourceTags) }) -> ListTagsForStreamOutput
+newListTagsForStreamOutput' :: ({ "NextToken" :: Maybe (NextToken), "Tags" :: Maybe (ResourceTags) } -> { "NextToken" :: Maybe (NextToken), "Tags" :: Maybe (ResourceTags) }) -> ListTagsForStreamOutput
 ```
 
 Constructs ListTagsForStreamOutput's fields from required parameters
@@ -758,7 +758,7 @@ Encode NextToken
 
 ``` purescript
 newtype NotAuthorizedException
-  = NotAuthorizedException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = NotAuthorizedException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The caller is not authorized to perform this operation.</p>
@@ -783,7 +783,7 @@ Constructs NotAuthorizedException from required parameters
 #### `newNotAuthorizedException'`
 
 ``` purescript
-newNotAuthorizedException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> NotAuthorizedException
+newNotAuthorizedException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> NotAuthorizedException
 ```
 
 Constructs NotAuthorizedException's fields from required parameters
@@ -808,7 +808,7 @@ Encode ResourceARN
 
 ``` purescript
 newtype ResourceInUseException
-  = ResourceInUseException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ResourceInUseException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The stream is currently not available for this operation.</p>
@@ -833,7 +833,7 @@ Constructs ResourceInUseException from required parameters
 #### `newResourceInUseException'`
 
 ``` purescript
-newResourceInUseException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ResourceInUseException
+newResourceInUseException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ResourceInUseException
 ```
 
 Constructs ResourceInUseException's fields from required parameters
@@ -842,7 +842,7 @@ Constructs ResourceInUseException's fields from required parameters
 
 ``` purescript
 newtype ResourceNotFoundException
-  = ResourceNotFoundException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = ResourceNotFoundException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>Amazon Kinesis Video Streams can't find the stream that you specified.</p>
@@ -867,7 +867,7 @@ Constructs ResourceNotFoundException from required parameters
 #### `newResourceNotFoundException'`
 
 ``` purescript
-newResourceNotFoundException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> ResourceNotFoundException
+newResourceNotFoundException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> ResourceNotFoundException
 ```
 
 Constructs ResourceNotFoundException's fields from required parameters
@@ -908,7 +908,7 @@ Encode Status
 
 ``` purescript
 newtype StreamInfo
-  = StreamInfo { "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "Version" :: NullOrUndefined (Version), "Status" :: NullOrUndefined (Status), "CreationTime" :: NullOrUndefined (Timestamp), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) }
+  = StreamInfo { "DeviceName" :: Maybe (DeviceName), "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "Version" :: Maybe (Version), "Status" :: Maybe (Status), "CreationTime" :: Maybe (Timestamp), "DataRetentionInHours" :: Maybe (DataRetentionInHours) }
 ```
 
 <p>An object describing a Kinesis video stream.</p>
@@ -933,7 +933,7 @@ Constructs StreamInfo from required parameters
 #### `newStreamInfo'`
 
 ``` purescript
-newStreamInfo' :: ({ "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "Version" :: NullOrUndefined (Version), "Status" :: NullOrUndefined (Status), "CreationTime" :: NullOrUndefined (Timestamp), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) } -> { "DeviceName" :: NullOrUndefined (DeviceName), "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "MediaType" :: NullOrUndefined (MediaType), "KmsKeyId" :: NullOrUndefined (KmsKeyId), "Version" :: NullOrUndefined (Version), "Status" :: NullOrUndefined (Status), "CreationTime" :: NullOrUndefined (Timestamp), "DataRetentionInHours" :: NullOrUndefined (DataRetentionInHours) }) -> StreamInfo
+newStreamInfo' :: ({ "DeviceName" :: Maybe (DeviceName), "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "Version" :: Maybe (Version), "Status" :: Maybe (Status), "CreationTime" :: Maybe (Timestamp), "DataRetentionInHours" :: Maybe (DataRetentionInHours) } -> { "DeviceName" :: Maybe (DeviceName), "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "MediaType" :: Maybe (MediaType), "KmsKeyId" :: Maybe (KmsKeyId), "Version" :: Maybe (Version), "Status" :: Maybe (Status), "CreationTime" :: Maybe (Timestamp), "DataRetentionInHours" :: Maybe (DataRetentionInHours) }) -> StreamInfo
 ```
 
 Constructs StreamInfo's fields from required parameters
@@ -974,7 +974,7 @@ Encode StreamName
 
 ``` purescript
 newtype StreamNameCondition
-  = StreamNameCondition { "ComparisonOperator" :: NullOrUndefined (ComparisonOperator), "ComparisonValue" :: NullOrUndefined (StreamName) }
+  = StreamNameCondition { "ComparisonOperator" :: Maybe (ComparisonOperator), "ComparisonValue" :: Maybe (StreamName) }
 ```
 
 <p>Specifies the condition that streams must satisfy to be returned when you list streams (see the <code>ListStreams</code> API). A condition has a comparison operation and a value. Currently, you can specify only the <code>BEGINS_WITH</code> operator, which finds streams whose names start with a given prefix. </p>
@@ -999,7 +999,7 @@ Constructs StreamNameCondition from required parameters
 #### `newStreamNameCondition'`
 
 ``` purescript
-newStreamNameCondition' :: ({ "ComparisonOperator" :: NullOrUndefined (ComparisonOperator), "ComparisonValue" :: NullOrUndefined (StreamName) } -> { "ComparisonOperator" :: NullOrUndefined (ComparisonOperator), "ComparisonValue" :: NullOrUndefined (StreamName) }) -> StreamNameCondition
+newStreamNameCondition' :: ({ "ComparisonOperator" :: Maybe (ComparisonOperator), "ComparisonValue" :: Maybe (StreamName) } -> { "ComparisonOperator" :: Maybe (ComparisonOperator), "ComparisonValue" :: Maybe (StreamName) }) -> StreamNameCondition
 ```
 
 Constructs StreamNameCondition's fields from required parameters
@@ -1040,7 +1040,7 @@ Encode TagKeyList
 
 ``` purescript
 newtype TagStreamInput
-  = TagStreamInput { "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "Tags" :: ResourceTags }
+  = TagStreamInput { "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "Tags" :: ResourceTags }
 ```
 
 ##### Instances
@@ -1063,7 +1063,7 @@ Constructs TagStreamInput from required parameters
 #### `newTagStreamInput'`
 
 ``` purescript
-newTagStreamInput' :: ResourceTags -> ({ "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "Tags" :: ResourceTags } -> { "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "Tags" :: ResourceTags }) -> TagStreamInput
+newTagStreamInput' :: ResourceTags -> ({ "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "Tags" :: ResourceTags } -> { "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "Tags" :: ResourceTags }) -> TagStreamInput
 ```
 
 Constructs TagStreamInput's fields from required parameters
@@ -1104,7 +1104,7 @@ Encode TagValue
 
 ``` purescript
 newtype TagsPerResourceExceededLimitException
-  = TagsPerResourceExceededLimitException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = TagsPerResourceExceededLimitException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>You have exceeded the limit of tags that you can associate with the resource. Kinesis video streams support up to 50 tags. </p>
@@ -1129,7 +1129,7 @@ Constructs TagsPerResourceExceededLimitException from required parameters
 #### `newTagsPerResourceExceededLimitException'`
 
 ``` purescript
-newTagsPerResourceExceededLimitException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> TagsPerResourceExceededLimitException
+newTagsPerResourceExceededLimitException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> TagsPerResourceExceededLimitException
 ```
 
 Constructs TagsPerResourceExceededLimitException's fields from required parameters
@@ -1138,7 +1138,7 @@ Constructs TagsPerResourceExceededLimitException's fields from required paramete
 
 ``` purescript
 newtype UntagStreamInput
-  = UntagStreamInput { "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "TagKeyList" :: TagKeyList }
+  = UntagStreamInput { "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "TagKeyList" :: TagKeyList }
 ```
 
 ##### Instances
@@ -1161,7 +1161,7 @@ Constructs UntagStreamInput from required parameters
 #### `newUntagStreamInput'`
 
 ``` purescript
-newUntagStreamInput' :: TagKeyList -> ({ "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "TagKeyList" :: TagKeyList } -> { "StreamARN" :: NullOrUndefined (ResourceARN), "StreamName" :: NullOrUndefined (StreamName), "TagKeyList" :: TagKeyList }) -> UntagStreamInput
+newUntagStreamInput' :: TagKeyList -> ({ "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "TagKeyList" :: TagKeyList } -> { "StreamARN" :: Maybe (ResourceARN), "StreamName" :: Maybe (StreamName), "TagKeyList" :: TagKeyList }) -> UntagStreamInput
 ```
 
 Constructs UntagStreamInput's fields from required parameters
@@ -1186,7 +1186,7 @@ Encode UntagStreamOutput
 
 ``` purescript
 newtype UpdateDataRetentionInput
-  = UpdateDataRetentionInput { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours }
+  = UpdateDataRetentionInput { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours }
 ```
 
 ##### Instances
@@ -1209,7 +1209,7 @@ Constructs UpdateDataRetentionInput from required parameters
 #### `newUpdateDataRetentionInput'`
 
 ``` purescript
-newUpdateDataRetentionInput' :: Version -> DataRetentionChangeInHours -> UpdateDataRetentionOperation -> ({ "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours } -> { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours }) -> UpdateDataRetentionInput
+newUpdateDataRetentionInput' :: Version -> DataRetentionChangeInHours -> UpdateDataRetentionOperation -> ({ "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours } -> { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "Operation" :: UpdateDataRetentionOperation, "DataRetentionChangeInHours" :: DataRetentionChangeInHours }) -> UpdateDataRetentionInput
 ```
 
 Constructs UpdateDataRetentionInput's fields from required parameters
@@ -1250,7 +1250,7 @@ Encode UpdateDataRetentionOutput
 
 ``` purescript
 newtype UpdateStreamInput
-  = UpdateStreamInput { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: NullOrUndefined (DeviceName), "MediaType" :: NullOrUndefined (MediaType) }
+  = UpdateStreamInput { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: Maybe (DeviceName), "MediaType" :: Maybe (MediaType) }
 ```
 
 ##### Instances
@@ -1273,7 +1273,7 @@ Constructs UpdateStreamInput from required parameters
 #### `newUpdateStreamInput'`
 
 ``` purescript
-newUpdateStreamInput' :: Version -> ({ "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: NullOrUndefined (DeviceName), "MediaType" :: NullOrUndefined (MediaType) } -> { "StreamName" :: NullOrUndefined (StreamName), "StreamARN" :: NullOrUndefined (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: NullOrUndefined (DeviceName), "MediaType" :: NullOrUndefined (MediaType) }) -> UpdateStreamInput
+newUpdateStreamInput' :: Version -> ({ "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: Maybe (DeviceName), "MediaType" :: Maybe (MediaType) } -> { "StreamName" :: Maybe (StreamName), "StreamARN" :: Maybe (ResourceARN), "CurrentVersion" :: Version, "DeviceName" :: Maybe (DeviceName), "MediaType" :: Maybe (MediaType) }) -> UpdateStreamInput
 ```
 
 Constructs UpdateStreamInput's fields from required parameters
@@ -1314,7 +1314,7 @@ Encode Version
 
 ``` purescript
 newtype VersionMismatchException
-  = VersionMismatchException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = VersionMismatchException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The stream version that you specified is not the latest version. To get the latest version, use the <a href="http://docs.aws.amazon.com/kinesisvideo/latest/dg/API_DescribeStream.html">DescribeStream</a> API.</p>
@@ -1339,7 +1339,7 @@ Constructs VersionMismatchException from required parameters
 #### `newVersionMismatchException'`
 
 ``` purescript
-newVersionMismatchException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> VersionMismatchException
+newVersionMismatchException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> VersionMismatchException
 ```
 
 Constructs VersionMismatchException's fields from required parameters
